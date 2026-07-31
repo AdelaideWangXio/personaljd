@@ -11,3 +11,6 @@ node_modules/
 *.token
 .env
 .env.*
+
+# 不上传到 GitHub
+README.md
