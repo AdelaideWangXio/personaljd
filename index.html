@@ -1,0 +1,1759 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="汪潇 Adelaide Wang — 7年跨平台品牌内容运营作品集。面向蔚来 NIO 品牌官号运营岗位，展示内容策略、平台增长、KOC整合营销、用户社群与 AIGC 赋能能力。" />
+  <meta name="author" content="汪潇 Adelaide Wang" />
+  <meta property="og:title" content="汪潇 | NIO 求职作品集 · 品牌官号运营" />
+  <meta property="og:description" content="7年跨平台品牌内容运营 | 内容策略 · 平台增长 · 用户社区 · AIGC" />
+  <title>汪潇 Adelaide Wang | NIO Portfolio 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --nio-blue: #00ADEF;
+      --nio-blue-dim: rgba(0, 173, 239, 0.14);
+      --nio-blue-glow: rgba(0, 173, 239, 0.35);
+      --black: #0B0B0C;
+      --black-2: #121214;
+      --black-3: #1A1A1D;
+      --gray-900: #2A2A2E;
+      --gray-600: #8A8A90;
+      --gray-400: #B0B0B6;
+      --gray-200: #E8E8EC;
+      --gray-100: #F3F3F5;
+      --white: #FFFFFF;
+      --radius: 16px;
+      --radius-sm: 10px;
+      --max: 1180px;
+      --nav-h: 68px;
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+      --font: "Inter", "Noto Sans SC", -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 12px); }
+    body {
+      font-family: var(--font);
+      background: var(--black);
+      color: var(--white);
+      line-height: 1.65;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button { font-family: inherit; border: none; background: none; cursor: pointer; color: inherit; }
+    ul { list-style: none; }
+
+    .container { width: min(100% - 40px, var(--max)); margin-inline: auto; }
+    .section { padding: 100px 0; position: relative; }
+    .section-light { background: var(--gray-100); color: var(--black); }
+    .section-dark { background: var(--black); color: var(--white); }
+    .section-elevated { background: var(--black-2); color: var(--white); }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--nio-blue);
+      font-weight: 500;
+      margin-bottom: 18px;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 22px;
+      height: 1px;
+      background: var(--nio-blue);
+    }
+    .section-title {
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .section-sub {
+      font-size: 16px;
+      color: var(--gray-600);
+      max-width: 640px;
+      line-height: 1.7;
+    }
+    .section-light .section-sub { color: #5c5c64; }
+    .section-head { margin-bottom: 56px; }
+
+    /* Nav */
+    .nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      height: var(--nav-h);
+      z-index: 100;
+      transition: background 0.35s var(--ease), backdrop-filter 0.35s, border-color 0.35s;
+      border-bottom: 1px solid transparent;
+    }
+    .nav.scrolled {
+      background: rgba(11, 11, 12, 0.82);
+      backdrop-filter: blur(18px) saturate(140%);
+      -webkit-backdrop-filter: blur(18px) saturate(140%);
+      border-bottom-color: rgba(255,255,255,0.06);
+    }
+    .nav-inner {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: min(100% - 40px, var(--max));
+      margin-inline: auto;
+    }
+    .logo {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+    .logo-mark {
+      font-size: 15px;
+      letter-spacing: 0.22em;
+    }
+    .logo-sep { opacity: 0.3; font-weight: 300; }
+    .logo-sub {
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--gray-600);
+      letter-spacing: 0.06em;
+    }
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+    .nav-links a {
+      font-size: 13px;
+      color: var(--gray-400);
+      transition: color 0.2s;
+      letter-spacing: 0.02em;
+    }
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--white); }
+    .nav-cta {
+      padding: 8px 16px;
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 999px;
+      font-size: 13px !important;
+      color: var(--white) !important;
+      transition: border-color 0.2s, background 0.2s !important;
+    }
+    .nav-cta:hover {
+      border-color: var(--nio-blue);
+      background: var(--nio-blue-dim);
+    }
+    .nav-toggle {
+      display: none;
+      width: 40px;
+      height: 40px;
+      place-items: center;
+      border-radius: 8px;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 18px;
+      height: 1.5px;
+      background: var(--white);
+      position: relative;
+    }
+    .nav-toggle span::before,
+    .nav-toggle span::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 18px;
+      height: 1.5px;
+      background: var(--white);
+    }
+    .nav-toggle span::before { top: -6px; }
+    .nav-toggle span::after { top: 6px; }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: calc(var(--nav-h) + 40px) 0 80px;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 70% 20%, rgba(0,173,239,0.12), transparent 55%),
+        radial-gradient(ellipse 50% 40% at 20% 80%, rgba(0,173,239,0.06), transparent 50%),
+        linear-gradient(180deg, #0B0B0C 0%, #101014 50%, #0B0B0C 100%);
+      z-index: 0;
+    }
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black, transparent);
+      z-index: 0;
+    }
+    .hero .container { position: relative; z-index: 1; }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(0,173,239,0.35);
+      background: var(--nio-blue-dim);
+      color: var(--nio-blue);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      margin-bottom: 28px;
+    }
+    .hero-badge i {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--nio-blue);
+      box-shadow: 0 0 10px var(--nio-blue);
+      animation: pulse 2s ease infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+    .hero h1 {
+      font-size: clamp(40px, 7vw, 72px);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 1.08;
+      margin-bottom: 12px;
+    }
+    .hero h1 .en {
+      display: block;
+      font-size: 0.42em;
+      font-weight: 400;
+      color: var(--gray-400);
+      letter-spacing: 0.04em;
+      margin-top: 10px;
+    }
+    .hero-role {
+      font-size: clamp(18px, 2.4vw, 26px);
+      font-weight: 400;
+      color: var(--gray-400);
+      margin-bottom: 28px;
+      letter-spacing: -0.01em;
+    }
+    .hero-role strong {
+      color: var(--white);
+      font-weight: 500;
+    }
+    .hero-desc {
+      max-width: 560px;
+      color: var(--gray-600);
+      font-size: 16px;
+      margin-bottom: 36px;
+    }
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 44px;
+    }
+    .tag {
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.03);
+      font-size: 13px;
+      color: var(--gray-400);
+      transition: border-color 0.25s, color 0.25s, background 0.25s;
+    }
+    .tag:hover {
+      border-color: rgba(0,173,239,0.4);
+      color: var(--white);
+      background: var(--nio-blue-dim);
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 26px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: transform 0.2s var(--ease), background 0.2s, border-color 0.2s, box-shadow 0.2s;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary {
+      background: var(--nio-blue);
+      color: var(--black);
+      box-shadow: 0 8px 28px var(--nio-blue-glow);
+    }
+    .btn-primary:hover { box-shadow: 0 12px 36px var(--nio-blue-glow); }
+    .btn-ghost {
+      border: 1px solid rgba(255,255,255,0.18);
+      color: var(--white);
+    }
+    .btn-ghost:hover {
+      border-color: rgba(255,255,255,0.4);
+      background: rgba(255,255,255,0.04);
+    }
+    .hero-meta {
+      margin-top: 56px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px 48px;
+      color: var(--gray-600);
+      font-size: 13px;
+    }
+    .hero-meta strong {
+      display: block;
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 2px;
+    }
+
+    /* Reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+    .reveal-delay-1 { transition-delay: 0.08s; }
+    .reveal-delay-2 { transition-delay: 0.16s; }
+    .reveal-delay-3 { transition-delay: 0.24s; }
+    .reveal-delay-4 { transition-delay: 0.32s; }
+
+    /* Stats */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .stat-card {
+      background: var(--black-2);
+      padding: 36px 28px;
+      text-align: left;
+    }
+    .stat-value {
+      font-size: clamp(28px, 3.5vw, 40px);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 8px;
+      font-variant-numeric: tabular-nums;
+    }
+    .stat-value .unit {
+      font-size: 0.55em;
+      font-weight: 500;
+      color: var(--nio-blue);
+      margin-left: 2px;
+    }
+    .stat-label {
+      font-size: 13px;
+      color: var(--gray-600);
+    }
+
+    /* Summary */
+    .summary-layout {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .summary-text p {
+      font-size: 16px;
+      color: var(--gray-400);
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+    .summary-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .chip {
+      padding: 6px 12px;
+      border-radius: 6px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      font-size: 12px;
+      color: var(--gray-400);
+    }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      display: grid;
+      gap: 24px;
+    }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 18px;
+      top: 12px;
+      bottom: 12px;
+      width: 1px;
+      background: linear-gradient(180deg, var(--nio-blue), rgba(255,255,255,0.08));
+    }
+    @media (min-width: 900px) {
+      .timeline {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+      .timeline::before {
+        left: 0; right: 0; top: 28px; bottom: auto; height: 1px; width: auto;
+        background: linear-gradient(90deg, transparent, rgba(0,173,239,0.5), rgba(255,255,255,0.08), transparent);
+      }
+    }
+    .tl-card {
+      position: relative;
+      background: var(--black-2);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius);
+      padding: 28px 24px 24px;
+      margin-left: 44px;
+      transition: border-color 0.3s, transform 0.3s var(--ease);
+    }
+    .tl-card:hover {
+      border-color: rgba(0,173,239,0.35);
+      transform: translateY(-3px);
+    }
+    @media (min-width: 900px) {
+      .tl-card { margin-left: 0; margin-top: 28px; }
+    }
+    .tl-dot {
+      position: absolute;
+      left: -44px;
+      top: 28px;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: var(--nio-blue);
+      box-shadow: 0 0 0 4px rgba(0,173,239,0.2);
+    }
+    @media (min-width: 900px) {
+      .tl-dot {
+        left: 50%;
+        top: -34px;
+        transform: translateX(-50%);
+      }
+    }
+    .tl-date {
+      font-size: 12px;
+      color: var(--nio-blue);
+      letter-spacing: 0.06em;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+    .tl-company {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .tl-role {
+      font-size: 13px;
+      color: var(--gray-600);
+      margin-bottom: 14px;
+    }
+    .tl-desc {
+      font-size: 13px;
+      color: var(--gray-400);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .tl-metrics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .tl-metrics span {
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--nio-blue-dim);
+      color: var(--nio-blue);
+    }
+
+    /* Competency */
+    .comp-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .comp-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      transition: box-shadow 0.3s, transform 0.3s var(--ease), border-color 0.3s;
+    }
+    .comp-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+      border-color: rgba(0,173,239,0.35);
+    }
+    .comp-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(0,173,239,0.15), rgba(0,173,239,0.05));
+      display: grid;
+      place-items: center;
+      margin-bottom: 18px;
+      color: var(--nio-blue);
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .comp-card h3 {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .comp-en {
+      font-size: 11px;
+      color: var(--gray-600);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .comp-card p {
+      font-size: 13px;
+      color: #5c5c64;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .comp-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .comp-tags span {
+      font-size: 11px;
+      padding: 4px 9px;
+      border-radius: 6px;
+      background: var(--gray-100);
+      color: #555;
+    }
+
+    /* Cases */
+    .case-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 36px;
+      padding: 6px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.06);
+      width: fit-content;
+      max-width: 100%;
+    }
+    .case-tab {
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-size: 13px;
+      color: var(--gray-600);
+      transition: all 0.25s;
+      white-space: nowrap;
+    }
+    .case-tab:hover { color: var(--white); }
+    .case-tab.active {
+      background: var(--nio-blue);
+      color: var(--black);
+      font-weight: 500;
+    }
+    .case-panel { display: none; }
+    .case-panel.active { display: block; animation: fadeUp 0.45s var(--ease); }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: none; }
+    }
+    .case-header {
+      margin-bottom: 32px;
+    }
+    .case-num {
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: var(--nio-blue);
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+    .case-header h3 {
+      font-size: clamp(22px, 3vw, 32px);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+    }
+    .case-meta {
+      font-size: 14px;
+      color: var(--gray-600);
+    }
+    .case-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .case-block {
+      background: var(--black-2);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+    .case-block h4 {
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--nio-blue);
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+    .case-block p, .case-block li {
+      font-size: 14px;
+      color: var(--gray-400);
+      line-height: 1.75;
+    }
+    .case-block ol {
+      padding-left: 18px;
+      list-style: decimal;
+    }
+    .case-block ol li { margin-bottom: 6px; }
+    .case-metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+    .metric {
+      background: linear-gradient(160deg, rgba(0,173,239,0.1), rgba(255,255,255,0.02));
+      border: 1px solid rgba(0,173,239,0.18);
+      border-radius: var(--radius-sm);
+      padding: 20px 16px;
+      text-align: center;
+    }
+    .metric .v {
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
+    }
+    .metric .l {
+      font-size: 12px;
+      color: var(--gray-600);
+    }
+    .case-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .case-gallery figure {
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.06);
+      background: var(--black-3);
+      position: relative;
+    }
+    .case-gallery img {
+      width: 100%;
+      aspect-ratio: 16/10;
+      object-fit: cover;
+      transition: transform 0.5s var(--ease);
+    }
+    .case-gallery figure:hover img { transform: scale(1.04); }
+    .case-gallery figcaption {
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      padding: 28px 12px 10px;
+      background: linear-gradient(transparent, rgba(0,0,0,0.75));
+      font-size: 12px;
+      color: var(--white);
+    }
+    .case-gallery.portrait {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .case-gallery.portrait img {
+      aspect-ratio: 3/4;
+      object-fit: cover;
+    }
+    .case-insight {
+      background: var(--black-3);
+      border-left: 3px solid var(--nio-blue);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 20px 24px;
+    }
+    .case-insight strong {
+      display: block;
+      font-size: 12px;
+      color: var(--nio-blue);
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    .case-insight p {
+      font-size: 14px;
+      color: var(--gray-400);
+      line-height: 1.75;
+    }
+    .funnel {
+      display: grid;
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .funnel-step {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 16px;
+      align-items: center;
+      padding: 14px 18px;
+      background: var(--black-2);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius-sm);
+    }
+    .funnel-step .step-name {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--nio-blue);
+    }
+    .funnel-step .step-desc {
+      font-size: 13px;
+      color: var(--gray-400);
+    }
+
+    /* Viral */
+    .viral-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .viral-col {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      border: 1px solid var(--gray-200);
+    }
+    .viral-col h3 {
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+    .viral-col .en {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      color: var(--gray-600);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .viral-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--gray-200);
+      transition: color 0.2s;
+    }
+    .viral-item:last-child { border-bottom: none; }
+    .viral-item:hover { color: var(--nio-blue); }
+    .viral-item .name { font-size: 14px; font-weight: 500; }
+    .viral-item .badge {
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(0,173,239,0.12);
+      color: #0088bb;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+    .viral-item .arrow {
+      font-size: 14px;
+      color: var(--gray-600);
+      opacity: 0;
+      transition: opacity 0.2s, transform 0.2s;
+      transform: translateX(-4px);
+    }
+    .viral-item:hover .arrow {
+      opacity: 1;
+      transform: none;
+      color: var(--nio-blue);
+    }
+
+    /* Why NIO */
+    .why-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 40px;
+      align-items: start;
+    }
+    .why-quote {
+      background: linear-gradient(160deg, rgba(0,173,239,0.12), rgba(255,255,255,0.02));
+      border: 1px solid rgba(0,173,239,0.2);
+      border-radius: var(--radius);
+      padding: 36px 32px;
+      position: sticky;
+      top: calc(var(--nav-h) + 24px);
+    }
+    .why-quote .q {
+      font-size: clamp(20px, 2.5vw, 26px);
+      font-weight: 500;
+      line-height: 1.5;
+      letter-spacing: -0.01em;
+      margin-bottom: 24px;
+    }
+    .why-quote .who {
+      font-size: 13px;
+      color: var(--gray-600);
+    }
+    .why-story {
+      font-size: 15px;
+      color: var(--gray-400);
+      line-height: 1.85;
+      margin-bottom: 28px;
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .why-item {
+      background: var(--black-2);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius-sm);
+      padding: 20px;
+      transition: border-color 0.25s;
+    }
+    .why-item:hover { border-color: rgba(0,173,239,0.35); }
+    .why-item h4 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .why-item h4::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--nio-blue);
+      flex-shrink: 0;
+    }
+    .why-item p {
+      font-size: 13px;
+      color: var(--gray-600);
+      line-height: 1.65;
+    }
+
+    /* AI showcase strip */
+    .ai-strip {
+      margin-top: 48px;
+      padding: 28px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(0,173,239,0.2);
+      background:
+        linear-gradient(135deg, rgba(0,173,239,0.08), transparent 50%),
+        var(--black-2);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 24px;
+      align-items: center;
+    }
+    .ai-badge {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      background: var(--nio-blue-dim);
+      border: 1px solid rgba(0,173,239,0.3);
+      display: grid;
+      place-items: center;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--nio-blue);
+    }
+    .ai-strip h4 {
+      font-size: 15px;
+      margin-bottom: 6px;
+    }
+    .ai-strip p {
+      font-size: 13px;
+      color: var(--gray-600);
+      line-height: 1.7;
+    }
+
+    /* Contact */
+    .contact {
+      text-align: center;
+      padding: 120px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .contact::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 50% 80%, rgba(0,173,239,0.15), transparent 60%);
+      pointer-events: none;
+    }
+    .contact .container { position: relative; z-index: 1; }
+    .contact h2 {
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+    }
+    .contact .lead {
+      font-size: 17px;
+      color: var(--gray-600);
+      margin-bottom: 40px;
+    }
+    .contact-cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+    .contact-card {
+      min-width: 220px;
+      padding: 22px 28px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.03);
+      transition: border-color 0.25s, background 0.25s;
+    }
+    .contact-card:hover {
+      border-color: rgba(0,173,239,0.4);
+      background: var(--nio-blue-dim);
+    }
+    .contact-card .label {
+      font-size: 12px;
+      color: var(--gray-600);
+      margin-bottom: 6px;
+      letter-spacing: 0.06em;
+    }
+    .contact-card .value {
+      font-size: 16px;
+      font-weight: 500;
+    }
+    .contact-foot {
+      font-size: 13px;
+      color: var(--gray-600);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 28px 0;
+      font-size: 12px;
+      color: var(--gray-600);
+    }
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+    }
+    .footer-ai {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(0,173,239,0.25);
+      color: var(--nio-blue);
+      font-size: 11px;
+    }
+
+    /* Mobile */
+    @media (max-width: 900px) {
+      .nav-links {
+        position: fixed;
+        inset: var(--nav-h) 0 auto 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: rgba(11,11,12,0.96);
+        backdrop-filter: blur(16px);
+        padding: 12px 20px 20px;
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+        transform: translateY(-120%);
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.35s var(--ease), opacity 0.35s;
+      }
+      .nav-links.open {
+        transform: none;
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .nav-links a {
+        padding: 14px 8px;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+        font-size: 15px;
+      }
+      .nav-cta { text-align: center; margin-top: 12px; }
+      .nav-toggle { display: grid; }
+      .summary-layout,
+      .why-layout,
+      .case-grid,
+      .viral-grid,
+      .comp-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .case-metrics { grid-template-columns: 1fr 1fr; }
+      .case-gallery { grid-template-columns: 1fr; }
+      .case-gallery.portrait { grid-template-columns: 1fr 1fr 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .why-quote { position: static; }
+      .funnel-step { grid-template-columns: 1fr; gap: 4px; }
+      .ai-strip { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .stats-grid { grid-template-columns: 1fr; }
+      .case-metrics { grid-template-columns: 1fr 1fr; }
+      .section { padding: 72px 0; }
+      .case-gallery.portrait { grid-template-columns: 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#top" class="logo" aria-label="首页">
+        <span class="logo-mark">NIO</span>
+        <span class="logo-sep">|</span>
+        <span class="logo-sub">Portfolio · Wang Xiao</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#summary">概览</a>
+        <a href="#timeline">履历</a>
+        <a href="#competency">能力</a>
+        <a href="#cases">案例</a>
+        <a href="#viral">爆款</a>
+        <a href="#why-nio">Why NIO</a>
+        <a href="#contact" class="nav-cta">联系我</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="打开菜单"><span></span></button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="container">
+      <div class="hero-badge reveal"><i></i> PORTFOLIO 2026 · FOR NIO</div>
+      <h1 class="reveal reveal-delay-1">
+        汪潇
+        <span class="en">Adelaide Wang</span>
+      </h1>
+      <p class="hero-role reveal reveal-delay-2">
+        <strong>品牌内容操盘手</strong> × 蔚来 ES6 车主
+      </p>
+      <p class="hero-desc reveal reveal-delay-2">
+        7 年跨平台品牌内容运营 · 内容策略 · 平台增长 · 用户社区<br />
+        面向「品牌官号运营」岗位，用可验证的增长结果说话。
+      </p>
+      <div class="hero-tags reveal reveal-delay-3">
+        <span class="tag">品牌官号运营</span>
+        <span class="tag">B站 / 小红书</span>
+        <span class="tag">KOC 整合营销</span>
+        <span class="tag">爆款内容</span>
+        <span class="tag">用户社群</span>
+        <span class="tag">AIGC 赋能</span>
+      </div>
+      <div class="hero-actions reveal reveal-delay-3">
+        <a class="btn btn-primary" href="#cases">查看核心案例</a>
+        <a class="btn btn-ghost" href="#why-nio">为什么是蔚来</a>
+      </div>
+      <div class="hero-meta reveal reveal-delay-4">
+        <div><strong>7 年</strong>跨行业新媒体运营</div>
+        <div><strong>全平台</strong>B站 · 小红书 · 公众号 · 微博</div>
+        <div><strong>ES6 车主</strong>用户视角 × 运营能力</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Executive Summary -->
+  <section class="section section-elevated" id="summary">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Executive Summary</div>
+        <h2 class="section-title">7 年跨平台品牌内容操盘</h2>
+      </div>
+      <div class="summary-layout">
+        <div class="summary-text reveal">
+          <p>
+            7 年新媒体运营经验，深度运营微信公众号、B站、小红书、微博及品牌社群。
+            擅长将 B 端技术语言转化为 C 端用户语言，搭建跨平台内容矩阵。
+          </p>
+          <p>
+            曾独立负责瑞声科技 B 站官号运营，0 预算涨粉 4200+；主导 REDMI K80 KOC 整合营销，
+            16 位博主双平台 11.2w 播放；从 0 到 1 搭建私域体系，月均 GMV 2.7w，复购率 30%。
+            同时是一名蔚来 ES6 车主，深度认同蔚来用户企业理念。
+          </p>
+          <div class="summary-tags">
+            <span class="chip">品牌官号运营</span>
+            <span class="chip">内容策略</span>
+            <span class="chip">B站 / 小红书</span>
+            <span class="chip">KOC 整合营销</span>
+            <span class="chip">用户社群</span>
+            <span class="chip">AIGC 赋能</span>
+          </div>
+        </div>
+        <div class="stats-grid reveal reveal-delay-2">
+          <div class="stat-card">
+            <div class="stat-value" data-count="87000" data-suffix="+">0</div>
+            <div class="stat-label">单条最高播放</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">10w<span class="unit">+</span></div>
+            <div class="stat-label">公众号爆款</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" data-count="4200" data-suffix="+">0</div>
+            <div class="stat-label">B站净增粉丝</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" data-count="112000" data-suffix="+">0</div>
+            <div class="stat-label">KOC 总播放</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">300w</div>
+            <div class="stat-label">年度内购 GMV</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" data-count="7" data-suffix="年">0</div>
+            <div class="stat-label">跨行业经验</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="section section-dark" id="timeline">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Career Timeline</div>
+        <h2 class="section-title">从内容到品牌，从流量到留量</h2>
+        <p class="section-sub">三段核心经历：付费用户运营 → 全链路品牌增长 → 技术品牌官号与 KOC 整合营销。</p>
+      </div>
+      <div class="timeline">
+        <article class="tl-card reveal">
+          <span class="tl-dot" aria-hidden="true"></span>
+          <div class="tl-date">2018.03 — 2019.08</div>
+          <h3 class="tl-company">英语流利说</h3>
+          <div class="tl-role">新媒体运营</div>
+          <p class="tl-desc">付费用户公众号运营；搭建用户生命周期运营体系；跨部门推动标签体系上线。</p>
+          <div class="tl-metrics">
+            <span>10w+ 推文</span>
+            <span>留存 +65%</span>
+            <span>日均转化 60 单</span>
+          </div>
+        </article>
+        <article class="tl-card reveal reveal-delay-1">
+          <span class="tl-dot" aria-hidden="true"></span>
+          <div class="tl-date">2021.04 — 2023.06</div>
+          <h3 class="tl-company">怪兽充电</h3>
+          <div class="tl-role">新媒体运营（开欢白酒）</div>
+          <p class="tl-desc">开欢白酒品牌全链路运营：内容种草 → 活动拉新 → 私域转化；节日营销 + 年度内购会 + CMO 内部直播。</p>
+          <div class="tl-metrics">
+            <span>月 GMV 2.7w</span>
+            <span>年 GMV 300w</span>
+            <span>复购率 30%</span>
+          </div>
+        </article>
+        <article class="tl-card reveal reveal-delay-2">
+          <span class="tl-dot" aria-hidden="true"></span>
+          <div class="tl-date">2023.06 — 至今</div>
+          <h3 class="tl-company">瑞声科技</h3>
+          <div class="tl-role">新媒体运营经理</div>
+          <p class="tl-desc">B站 / 公众号 / 小红书全平台运营；KOC 整合营销；AIGC 内容生产；CES 等展会传播。</p>
+          <div class="tl-metrics">
+            <span>0 成本涨粉 4200+</span>
+            <span>超目标 155%</span>
+            <span>单条 8.7w 播放</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Competency -->
+  <section class="section section-light" id="competency">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Core Competency</div>
+        <h2 class="section-title">对标「品牌官号运营」的核心能力</h2>
+        <p class="section-sub">以 JD 能力模型反向拆解，用过往案例与数据验证每一项可迁移能力。</p>
+      </div>
+      <div class="comp-grid">
+        <article class="comp-card reveal">
+          <div class="comp-icon">01</div>
+          <h3>内容策划</h3>
+          <div class="comp-en">Content Strategy</div>
+          <p>7 年内容策划经验，8 篇 10w+ 推文产出，具备跨品类内容矩阵搭建能力。</p>
+          <div class="comp-tags"><span>选题策划</span><span>文案脚本</span><span>爆款案例</span></div>
+        </article>
+        <article class="comp-card reveal reveal-delay-1">
+          <div class="comp-icon">02</div>
+          <h3>平台矩阵</h3>
+          <div class="comp-en">Platform Matrix</div>
+          <p>B站 / 小红书 / 公众号 / 微博全平台运营，深度理解平台生态与算法逻辑，独立负责品牌官号。</p>
+          <div class="comp-tags"><span>B站</span><span>小红书</span><span>公众号</span></div>
+        </article>
+        <article class="comp-card reveal reveal-delay-2">
+          <div class="comp-icon">03</div>
+          <h3>热点捕捉</h3>
+          <div class="comp-en">Trend Sensing</div>
+          <p>城市饮食文化系列爆款内容基因，擅长结合平台趋势与热梗策划，流量型内容嗅觉敏锐。</p>
+          <div class="comp-tags"><span>热点</span><span>趋势</span><span>传播</span></div>
+        </article>
+        <article class="comp-card reveal">
+          <div class="comp-icon">04</div>
+          <h3>品牌表达</h3>
+          <div class="comp-en">Brand Voice</div>
+          <p>将 B 端技术语言翻译为 C 端用户语言，把控品牌调性与内容一致性，统一 brief 输出。</p>
+          <div class="comp-tags"><span>品牌调性</span><span>用户语言</span><span>一致性</span></div>
+        </article>
+        <article class="comp-card reveal reveal-delay-1">
+          <div class="comp-icon">05</div>
+          <h3>用户社群</h3>
+          <div class="comp-en">User Community</div>
+          <p>0→1 搭建私域用户社群，6 个月沉淀 2000+ 用户，用户分层运营 + UGC 内容挖掘。</p>
+          <div class="comp-tags"><span>社群运营</span><span>分层运营</span><span>UGC</span></div>
+        </article>
+        <article class="comp-card reveal reveal-delay-2">
+          <div class="comp-icon">06</div>
+          <h3>数据复盘 · AIGC</h3>
+          <div class="comp-en">Data &amp; AI</div>
+          <p>以数据驱动内容迭代；GPT 辅助选题 / 脚本，即梦辅助视觉，内容生产周期缩短约 40%。</p>
+          <div class="comp-tags"><span>数据分析</span><span>AIGC</span><span>效率提效</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cases -->
+  <section class="section section-dark" id="cases">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Selected Cases</div>
+        <h2 class="section-title">核心案例精选</h2>
+        <p class="section-sub">四段可复用的方法论：官号增长、KOC 整合、全链路转化、付费用户生命周期。</p>
+      </div>
+
+      <div class="case-tabs reveal" role="tablist" aria-label="案例切换">
+        <button class="case-tab active" data-case="1" role="tab" aria-selected="true">CASE 01 · B站官号</button>
+        <button class="case-tab" data-case="2" role="tab" aria-selected="false">CASE 02 · KOC 营销</button>
+        <button class="case-tab" data-case="3" role="tab" aria-selected="false">CASE 03 · 全链路</button>
+        <button class="case-tab" data-case="4" role="tab" aria-selected="false">CASE 04 · 用户运营</button>
+      </div>
+
+      <!-- Case 1 -->
+      <div class="case-panel active" id="case-1" role="tabpanel">
+        <div class="case-header">
+          <div class="case-num">CASE 01 · 品牌官号运营</div>
+          <h3>瑞声科技 B站官号独立运营</h3>
+          <p class="case-meta">技术科普方向 · 无付费投放 · 粉丝净增 4200+ · 年度目标 155%</p>
+        </div>
+        <div class="case-metrics">
+          <div class="metric"><div class="v">87,000+</div><div class="l">单条最高播放</div></div>
+          <div class="metric"><div class="v">1,869</div><div class="l">单条涨粉</div></div>
+          <div class="metric"><div class="v">60,000+</div><div class="l">第二条播放</div></div>
+          <div class="metric"><div class="v">155%</div><div class="l">年度涨粉目标</div></div>
+        </div>
+        <div class="case-grid">
+          <div class="case-block">
+            <h4>Background · 背景</h4>
+            <p>瑞声科技 B 站官方账号处于起步阶段，B 端技术品牌面临 C 端化传播挑战——如何让技术产品被普通用户看懂、愿意看、愿意转。无付费投放预算。</p>
+          </div>
+          <div class="case-block">
+            <h4>Strategy · 策略</h4>
+            <ol>
+              <li>搭建 4 大内容方向矩阵（技术科普 / 业务展示 / 品牌活动 / 展会传播）</li>
+              <li>基于平台算法与用户偏好优化选题与标题</li>
+              <li>将技术语言翻译为用户语言，找到专业性与趣味性平衡点</li>
+              <li>结合 GPT 辅助选题策划与数据复盘</li>
+            </ol>
+          </div>
+          <div class="case-block">
+            <h4>Execution · 执行</h4>
+            <p>对接内部业务团队及外部供应商，结合 GPT 辅助完成资料梳理、传播角度提炼、脚本初稿、分镜文案及修改反馈。统筹拍摄执行与成片交付，即梦生成视觉素材辅助内容制作。</p>
+          </div>
+          <div class="case-block">
+            <h4>Results · 成果</h4>
+            <p>任期内粉丝净增 4200+，达成年度涨粉目标 155%。2 条爆款视频单条最高 8.7w 播放，总播放 14.7w+，总互动 6356+，内容生产周期缩短约 40%。</p>
+          </div>
+        </div>
+        <div class="case-gallery">
+          <figure>
+            <img src="assets/bilibili-hifi.jpg" alt="Hi-Fi 扬声器 B站视频封面" loading="lazy" />
+            <figcaption>Hi-Fi 扬声器 · 87,000 播放</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/bilibili-thin.jpg" alt="最薄扬声器 B站视频封面" loading="lazy" />
+            <figcaption>最薄扬声器 · 60,000 播放</figcaption>
+          </figure>
+          <figure style="display:grid;place-items:center;padding:24px;aspect-ratio:16/10;">
+            <div style="text-align:center">
+              <div style="font-size:28px;font-weight:600;color:var(--nio-blue);margin-bottom:8px;">147,000+</div>
+              <div style="font-size:13px;color:var(--gray-600);line-height:1.6">总播放 · 2,644 总涨粉<br />6,356 总互动</div>
+            </div>
+          </figure>
+        </div>
+        <div class="case-insight">
+          <strong>复盘 Insight</strong>
+          <p>B 端品牌在 C 端化传播的关键：在专业性与趣味性间找到平衡点，用「用户听得懂的话」讲「技术有多牛」。内容矩阵系统化布局 + AI 赋能生产 + 数据驱动迭代，构成可迁移的官号增长公式。</p>
+        </div>
+      </div>
+
+      <!-- Case 2 -->
+      <div class="case-panel" id="case-2" role="tabpanel">
+        <div class="case-header">
+          <div class="case-num">CASE 02 · KOC 整合营销</div>
+          <h3>REDMI K80 至尊版 KOC 博主置换</h3>
+          <p class="case-meta">B站 &amp; 小红书 · 16 位博主 · 双平台品牌联合营销</p>
+        </div>
+        <div class="case-metrics">
+          <div class="metric"><div class="v">112,000+</div><div class="l">总播放量</div></div>
+          <div class="metric"><div class="v">4,867</div><div class="l">总互动量</div></div>
+          <div class="metric"><div class="v">16 位</div><div class="l">合作博主</div></div>
+          <div class="metric"><div class="v">2</div><div class="l">覆盖平台</div></div>
+        </div>
+        <div class="case-grid">
+          <div class="case-block">
+            <h4>Background · 背景</h4>
+            <p>REDMI K80 至尊版上市推广，需在 B 站与小红书通过 KOC 博主置换合作实现产品种草与品牌曝光。预算有限，需精准匹配博主类型，最大化传播效果。</p>
+          </div>
+          <div class="case-block">
+            <h4>Strategy · 策略</h4>
+            <ol>
+              <li>精选 16 位科技 / 手工 DIY 领域博主，覆盖差异化受众圈层</li>
+              <li>梳理产品核心卖点（大师级同轴扬声器），制定种草角度</li>
+              <li>统一 brief 输出，把控内容方向与品牌调性一致性</li>
+              <li>分批次发布形成传播节奏，双平台覆盖</li>
+            </ol>
+          </div>
+          <div class="case-block">
+            <h4>Execution · 执行</h4>
+            <p>完成博主筛选、brief 制定、内容审核与发布全流程统筹。协调 16 位博主产出评测 / 创意内容，覆盖 B 站与小红书。实时跟踪传播数据，动态调整内容策略。</p>
+          </div>
+          <div class="case-block">
+            <h4>Results · 成果</h4>
+            <p>总播放量 112,000+，总互动量 4,867，16 位博主双平台覆盖。产品核心卖点得到多角度曝光，传播声量形成持续峰值。</p>
+          </div>
+        </div>
+        <div class="case-gallery">
+          <figure>
+            <img src="assets/koc-tech.jpg" alt="科技评测内容" loading="lazy" />
+            <figcaption>科技评测</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/koc-diy.jpg" alt="创意 DIY 内容" loading="lazy" />
+            <figcaption>创意 DIY</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/koc-unbox.jpg" alt="产品开箱内容" loading="lazy" />
+            <figcaption>产品开箱</figcaption>
+          </figure>
+        </div>
+        <div class="case-insight">
+          <strong>复盘 Insight</strong>
+          <p>KOC 置换合作的关键在于「精准匹配 × 内容把控 × 节奏控制」。科技类产品需要找到产品卖点与博主创作风格的契合点，避免硬植入。统一 brief 与多轮内容审核确保品牌一致性；分批发布形成持续传播声量。</p>
+        </div>
+      </div>
+
+      <!-- Case 3 -->
+      <div class="case-panel" id="case-3" role="tabpanel">
+        <div class="case-header">
+          <div class="case-num">CASE 03 · 全链路运营</div>
+          <h3>怪兽充电 · 开欢白酒全链路运营</h3>
+          <p class="case-meta">内容种草 → 活动拉新 → 私域转化 → 复购增长 · 年度 GMV 300w</p>
+        </div>
+        <div class="case-metrics">
+          <div class="metric"><div class="v">300w</div><div class="l">年度 GMV</div></div>
+          <div class="metric"><div class="v">2.7w</div><div class="l">月均 GMV</div></div>
+          <div class="metric"><div class="v">30%</div><div class="l">复购率</div></div>
+          <div class="metric"><div class="v">2,000+</div><div class="l">私域用户</div></div>
+        </div>
+        <div class="case-grid">
+          <div class="case-block">
+            <h4>Background · 背景</h4>
+            <p>怪兽充电拓展酒类新业务线（开欢白酒），需要从零搭建品牌内容运营与用户转化体系。无现成用户池，需通过内容种草 + 活动拉新 + 私域承接的全链路设计实现商业转化。</p>
+          </div>
+          <div class="case-block">
+            <h4>Strategy · 策略</h4>
+            <ol>
+              <li>内容种草：公众号推文平均阅读率 13%（远超行业 5–8%）</li>
+              <li>活动拉新：裂变活动单次净增 2000 人，成本低至 1.5 元/人</li>
+              <li>私域承接：6 个月沉淀 2000+ 酒类用户，用户分层运营</li>
+              <li>节点转化：节日营销 + 年度内购会 + CMO 内部直播 + 买赠</li>
+            </ol>
+          </div>
+          <div class="case-block">
+            <h4>Execution · 执行</h4>
+            <p>全链路统筹：内容输出 → 多渠道引流 → 私域沉淀 → 用户分层 → 活动转化 → 复购维护。协同 BD 品牌蓝 V 与微博 KOC 联动，单次话题曝光最高 550w。</p>
+          </div>
+          <div class="case-block">
+            <h4>Results · 成果</h4>
+            <p>私域月均 GMV 2.7w，复购率 30%，核心用户单笔均额 1.2w。年度内购 GMV 累计 300w+。话题曝光最高 550w，推文平均阅读率 13%。</p>
+          </div>
+        </div>
+        <div class="funnel" style="margin-bottom:24px">
+          <div class="funnel-step"><span class="step-name">内容种草</span><span class="step-desc">公众号推文阅读率 13% · 话题曝光 550w</span></div>
+          <div class="funnel-step"><span class="step-name">活动拉新</span><span class="step-desc">裂变拉新单次 2000 人 · 成本 1.5 元/人</span></div>
+          <div class="funnel-step"><span class="step-name">私域沉淀</span><span class="step-desc">6 个月累计 2,000+ 酒类用户</span></div>
+          <div class="funnel-step"><span class="step-name">活动转化</span><span class="step-desc">月均 GMV 2.7 万 · 年度内购 300w</span></div>
+          <div class="funnel-step"><span class="step-name">复购增长</span><span class="step-desc">复购率 30% · 核心用户单笔均额 1.2w</span></div>
+        </div>
+        <div class="case-gallery portrait">
+          <figure>
+            <img src="assets/kaihuan-1.jpg" alt="开欢白酒内容物料 1" loading="lazy" />
+          </figure>
+          <figure>
+            <img src="assets/kaihuan-2.jpg" alt="开欢白酒内容物料 2" loading="lazy" />
+          </figure>
+          <figure>
+            <img src="assets/kaihuan-3.jpg" alt="开欢白酒内容物料 3" loading="lazy" />
+          </figure>
+        </div>
+        <div class="case-insight">
+          <strong>复盘 Insight</strong>
+          <p>全链路运营的核心：内容种草建立认知，活动拉新获取用户，私域分层精准触达，节点活动驱动大额转化。高净值白酒用户与品牌社群用户画像高度重合——重品牌认同感、重运营关系维护，这与蔚来「用户企业」理念高度同频。</p>
+        </div>
+      </div>
+
+      <!-- Case 4 -->
+      <div class="case-panel" id="case-4" role="tabpanel">
+        <div class="case-header">
+          <div class="case-num">CASE 04 · 用户运营</div>
+          <h3>英语流利说 · 付费用户公众号运营</h3>
+          <p class="case-meta">内容体系搭建 · 用户生命周期 · 跨部门标签体系</p>
+        </div>
+        <div class="case-metrics">
+          <div class="metric"><div class="v">10w+</div><div class="l">推文最高阅读</div></div>
+          <div class="metric"><div class="v">9w+</div><div class="l">推文均阅读</div></div>
+          <div class="metric"><div class="v">65%</div><div class="l">留存同比提升</div></div>
+          <div class="metric"><div class="v">4w+</div><div class="l">活动参与</div></div>
+        </div>
+        <div class="case-grid">
+          <div class="case-block">
+            <h4>Background · 背景</h4>
+            <p>付费用户群体需要持续的内容触达与运营触点，原有公众号内容框架不完善，用户分层与个性化触达能力不足，影响用户活跃、转化与留存。</p>
+          </div>
+          <div class="case-block">
+            <h4>Strategy · 策略</h4>
+            <ol>
+              <li>搭建「懂你学堂」公众号内容框架</li>
+              <li>基于用户生命周期数据建立维护、激励和召回策略</li>
+              <li>跨部门协同推动用户标签体系上线</li>
+              <li>策划用户活动，联动 App、公众号和社群形成闭环</li>
+            </ol>
+          </div>
+          <div class="case-block">
+            <h4>Execution · 执行</h4>
+            <p>负责软文、课程营销文案及社群内容输出。协同数据和产品部门推动用户标签体系及公众号个性化菜单上线。策划用户活动，实现付费用户留存率显著提升。</p>
+          </div>
+          <div class="case-block">
+            <h4>Results · 成果</h4>
+            <p>推文均阅读 9w+，最高 10w+。活动参与 4w+ 人次，用户留存同比提升 65%，日均转化 60 单。</p>
+          </div>
+        </div>
+        <div class="case-insight">
+          <strong>复盘 Insight</strong>
+          <p>付费用户运营的核心在于「生命周期管理 × 分层触达 × 闭环设计」。内容创新显著提升用户打开率与互动率——这套方法论可直接映射到蔚来车主社区与 App 内容运营场景。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Viral Articles -->
+  <section class="section section-light" id="viral">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Viral Articles</div>
+        <h2 class="section-title">爆款推文案例集</h2>
+        <p class="section-sub">8 篇 10w+ 推文 · 方法论驱动的系统性产出，覆盖广告种草与城市饮食文化两条内容线。</p>
+      </div>
+      <div class="viral-grid">
+        <div class="viral-col reveal">
+          <h3>广告种草文</h3>
+          <div class="en">Branded Content</div>
+          <a class="viral-item" href="https://mp.weixin.qq.com/s/3AlLeGhn6WwKMIQ1EX-IOA" target="_blank" rel="noopener">
+            <span class="name">巡湘记</span>
+            <span class="badge">10w+</span>
+            <span class="arrow">→</span>
+          </a>
+          <a class="viral-item" href="https://mp.weixin.qq.com/s/clVoHQ0sHa31nojjlSaOfw" target="_blank" rel="noopener">
+            <span class="name">丰圆轩</span>
+            <span class="badge">10w+</span>
+            <span class="arrow">→</span>
+          </a>
+          <a class="viral-item" href="https://mp.weixin.qq.com/s/E9WzFdRCwRy1iZON98871w" target="_blank" rel="noopener">
+            <span class="name">深圳贤合庄</span>
+            <span class="badge">10w+</span>
+            <span class="arrow">→</span>
+          </a>
+          <a class="viral-item" href="https://mp.weixin.qq.com/s/TouJh5YNhYGfktUvCmmLFw" target="_blank" rel="noopener">
+            <span class="name">许爷剁椒鱼头</span>
+            <span class="badge">10w+</span>
+            <span class="arrow">→</span>
+          </a>
+        </div>
+        <div class="viral-col reveal reveal-delay-1">
+          <h3>城市 / 饮食文化</h3>
+          <div class="en">City &amp; Food Culture</div>
+          <a class="viral-item" href="https://mp.weixin.qq.com/s/3p7I0SGoAnhM32glClKZHA" target="_blank" rel="noopener">
+            <span class="name">顶特勒</span>
+            <span class="arrow">→</span>
+          </a>
+          <a class="viral-item" href="https://mp.weixin.qq.com/s/pDPy_ksu_Z0vdUS5r6mOAg" target="_blank" rel="noopener">
+            <span class="name">荆州饮食文化</span>
+            <span class="arrow">→</span>
+          </a>
+          <a class="viral-item" href="https://mp.weixin.qq.com/s/Om3P84YAtnctlAuGiEBq4Q" target="_blank" rel="noopener">
+            <span class="name">上海 30 年老面馆</span>
+            <span class="arrow">→</span>
+          </a>
+          <a class="viral-item" href="https://mp.weixin.qq.com/s/9cSSuRO-qvU7UU7udNS-xw" target="_blank" rel="noopener">
+            <span class="name">横沔 · 被遗忘的老上海</span>
+            <span class="arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why NIO -->
+  <section class="section section-dark" id="why-nio">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow">Why NIO</div>
+        <h2 class="section-title">为什么是蔚来</h2>
+        <p class="section-sub">一名 ES6 车主的品牌运营思考</p>
+      </div>
+      <div class="why-layout">
+        <div class="why-quote reveal">
+          <p class="q">「我是蔚来的用户，我也最懂怎么运营蔚来的用户。」</p>
+          <p class="who">汪潇 · ES6 车主 · 7 年品牌内容运营</p>
+        </div>
+        <div>
+          <p class="why-story reveal">
+            我是一名蔚来 ES6 车主，从用户视角深度体验了蔚来的服务体系——从 NIO House 社区运营、NIO Life 周边生态到 3 分钟换电的极致服务。作为用户，我切身理解蔚来「用户企业」的底色：不是把车主当流量，而是当朋友。这种体验让我相信，内容运营的最高境界是让用户成为品牌的共建者。
+          </p>
+          <div class="why-grid">
+            <article class="why-item reveal">
+              <h4>B 端 C 端化经验</h4>
+              <p>瑞声科技的 B 端技术品牌 C 端化传播经验，可迁移至蔚来 / firefly 的技术品牌内容表达。</p>
+            </article>
+            <article class="why-item reveal reveal-delay-1">
+              <h4>全平台操盘能力</h4>
+              <p>B站 / 小红书 / 公众号 / 微博全平台独立运营经验，直接对接品牌官号全矩阵需求。</p>
+            </article>
+            <article class="why-item reveal">
+              <h4>用户社群运营</h4>
+              <p>从 0 到 1 搭建私域社群的实战经验，用户分层 + UGC 挖掘能力，对接蔚来社区运营基因。</p>
+            </article>
+            <article class="why-item reveal reveal-delay-1">
+              <h4>车主共情力</h4>
+              <p>我是 ES6 车主，理解用户视角和社区氛围，能产出真正打动用户的内容。</p>
+            </article>
+          </div>
+
+          <div class="ai-strip reveal">
+            <div class="ai-badge">AIGC</div>
+            <div>
+              <h4>AI 应用能力 · 不只写在简历里</h4>
+              <p>
+                日常用 GPT 辅助选题、脚本与数据复盘，用即梦等工具生成视觉素材，内容生产周期缩短约 40%。
+                <strong style="color:var(--gray-400);font-weight:500">本作品网页本身即由 AI 协作完成信息架构、视觉设计与前端实现</strong>——从 PPT 到可交互官网级展示，验证「内容人 + AI」的交付效率与审美把控。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact section-dark" id="contact">
+    <div class="container reveal">
+      <div class="eyebrow" style="justify-content:center">Thank You</div>
+      <h2>感谢您的阅读</h2>
+      <p class="lead">期待与蔚来共同创造用户价值</p>
+      <div class="contact-cards">
+        <a class="contact-card" href="tel:15827564969">
+          <div class="label">PHONE</div>
+          <div class="value">158 2756 4969</div>
+        </a>
+        <a class="contact-card" href="mailto:737540869@qq.com">
+          <div class="label">EMAIL</div>
+          <div class="value">737540869@qq.com</div>
+        </a>
+      </div>
+      <p class="contact-foot">汪潇 Adelaide Wang · 蔚来 ES6 车主 · 7 年品牌内容运营</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© 2026 汪潇 Adelaide Wang · Portfolio for NIO</div>
+      <div class="footer-ai">✦ Crafted with AI · NIO Design Language</div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      // Nav scroll state
+      const nav = document.getElementById("nav");
+      const onScroll = () => {
+        nav.classList.toggle("scrolled", window.scrollY > 24);
+      };
+      onScroll();
+      window.addEventListener("scroll", onScroll, { passive: true });
+
+      // Mobile menu
+      const toggle = document.getElementById("navToggle");
+      const links = document.getElementById("navLinks");
+      toggle.addEventListener("click", () => {
+        links.classList.toggle("open");
+      });
+      links.querySelectorAll("a").forEach((a) => {
+        a.addEventListener("click", () => links.classList.remove("open"));
+      });
+
+      // Active nav link
+      const sections = ["summary", "timeline", "competency", "cases", "viral", "why-nio", "contact"]
+        .map((id) => document.getElementById(id))
+        .filter(Boolean);
+      const navAs = [...links.querySelectorAll("a[href^='#']")];
+      const setActive = () => {
+        let current = "";
+        const y = window.scrollY + 100;
+        sections.forEach((sec) => {
+          if (sec.offsetTop <= y) current = sec.id;
+        });
+        navAs.forEach((a) => {
+          const href = a.getAttribute("href").slice(1);
+          a.classList.toggle("active", href === current && !a.classList.contains("nav-cta"));
+        });
+      };
+      window.addEventListener("scroll", setActive, { passive: true });
+
+      // Reveal on scroll
+      const reveals = document.querySelectorAll(".reveal");
+      if ("IntersectionObserver" in window) {
+        const io = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((e) => {
+              if (e.isIntersecting) {
+                e.target.classList.add("visible");
+                io.unobserve(e.target);
+              }
+            });
+          },
+          { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+        );
+        reveals.forEach((el) => io.observe(el));
+      } else {
+        reveals.forEach((el) => el.classList.add("visible"));
+      }
+
+      // Count-up stats
+      const counters = document.querySelectorAll("[data-count]");
+      const formatNum = (n) => n.toLocaleString("en-US");
+      const animateCount = (el) => {
+        const target = parseInt(el.dataset.count, 10);
+        const suffix = el.dataset.suffix || "";
+        const duration = 1400;
+        const start = performance.now();
+        const step = (now) => {
+          const t = Math.min(1, (now - start) / duration);
+          const eased = 1 - Math.pow(1 - t, 3);
+          const val = Math.round(target * eased);
+          el.textContent = formatNum(val) + suffix;
+          if (t < 1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+      };
+      if ("IntersectionObserver" in window) {
+        const cio = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((e) => {
+              if (e.isIntersecting) {
+                animateCount(e.target);
+                cio.unobserve(e.target);
+              }
+            });
+          },
+          { threshold: 0.4 }
+        );
+        counters.forEach((el) => cio.observe(el));
+      }
+
+      // Case tabs
+      const tabs = document.querySelectorAll(".case-tab");
+      const panels = document.querySelectorAll(".case-panel");
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          const id = tab.dataset.case;
+          tabs.forEach((t) => {
+            t.classList.toggle("active", t === tab);
+            t.setAttribute("aria-selected", t === tab ? "true" : "false");
+          });
+          panels.forEach((p) => {
+            p.classList.toggle("active", p.id === "case-" + id);
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

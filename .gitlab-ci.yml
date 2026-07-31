@@ -1,0 +1,16 @@
+# GitLab Pages — 自动把静态作品站发布为可访问网址
+# 文档: https://docs.gitlab.com/ee/user/project/pages/
+
+image: alpine:latest
+
+pages:
+  stage: deploy
+  script:
+    - mkdir -p public
+    - cp index.html public/
+    - cp -r assets public/
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
