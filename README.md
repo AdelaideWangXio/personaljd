@@ -1,89 +1,84 @@
 # 汪潇 · NIO 求职作品集
 
 品牌官号运营 / 内容策略 / KOC / 用户社群 / AIGC  
-单页作品站，面向 Boss 直聘等场景通过 **GitLab Pages 链接** 分享。
+单页作品站，通过 **GitHub Pages** 公开链接分享给 Boss / HR。
 
 ## 本地预览
 
-用浏览器直接打开 `index.html`，或在本目录执行：
-
-```bash
-python3 -m http.server 8080
-```
-
-访问 http://localhost:8080
-
-## 发布到 GitLab Pages（推荐流程）
-
-### 1. 在 GitLab 新建空项目
-
-1. 打开 [https://gitlab.com](https://gitlab.com) 并登录（没有账号先注册）
-2. 右上角 **New project** → **Create blank project**
-3. 建议设置：
-   - **Project name**：`nio-portfolio`（可自定义）
-   - **Visibility**：Public（公开，HR 无需登录即可打开）
-   - **不要**勾选 “Initialize repository with a README”（本地已有代码）
-4. 创建后复制项目地址，例如：  
-   `https://gitlab.com/你的用户名/nio-portfolio.git`
-
-### 2. 本机推送代码
-
-在终端进入本目录后执行（把地址换成你的）：
+双击 `index.html`，或：
 
 ```bash
 cd /Users/wangxiao/Desktop/NIO_Portfolio_WangXiao
-
-git remote add origin https://gitlab.com/你的用户名/nio-portfolio.git
-git branch -M main
-git push -u origin main
+python3 -m http.server 8080
 ```
 
-若 GitLab 要求登录：
+浏览器打开 http://localhost:8080
 
-- 推荐使用 **Personal Access Token** 当密码  
-  路径：GitLab → Avatar → Preferences → Access Tokens  
-  勾选 `write_repository`，生成后复制保存
-- 用户名填 GitLab 用户名，密码填 Token
+## 发布到 GitHub Pages（推荐）
 
-### 3. 等待 Pages 部署完成
+### 1. 注册 / 登录 GitHub
 
-1. 打开项目页 → 左侧 **Build → Pipelines**
-2. 等待最新流水线显示 **passed**（约 1～2 分钟）
-3. 打开 **Deploy → Pages**，复制访问地址
+打开 [https://github.com](https://github.com)
 
-常见地址格式：
+### 2. 新建空仓库
+
+1. 右上角 **+** → **New repository**
+2. 建议设置：
+   - **Repository name**：`nio-portfolio`（可自定义）
+   - **Public**（公开，HR 可直接打开，免费账号一般都可选）
+   - **不要**勾选 Add a README（本地已有文件）
+3. 点 **Create repository**
+4. 复制仓库地址，例如：  
+   `https://github.com/你的用户名/nio-portfolio.git`
+
+### 3. 本机推送
+
+```bash
+cd /Users/wangxiao/Desktop/NIO_Portfolio_WangXiao
+./push-to-github.sh
+```
+
+按提示粘贴仓库地址和 **Personal Access Token**。
+
+**Token 创建：**  
+https://github.com/settings/tokens  
+→ **Generate new token (classic)**  
+→ 勾选 **`repo`**  
+→ 生成后复制
+
+### 4. 打开 GitHub Pages
+
+1. 打开仓库 → **Settings → Pages**
+2. **Source** 选 **GitHub Actions**
+3. 到 **Actions** 页等 `Deploy GitHub Pages` 变绿
+4. 再回 **Settings → Pages** 复制网址
+
+常见地址：
 
 ```text
-https://你的用户名.gitlab.io/nio-portfolio/
+https://你的用户名.github.io/nio-portfolio/
 ```
 
-（若项目名或用户名不同，以 Pages 页面显示为准）
+### 5. 发给 HR
 
-### 4. 发给 HR / 写进 Boss 简历
-
-示例文案：
-
-> 作品集（手机可打开）：https://你的用户名.gitlab.io/nio-portfolio/
+> 作品集（手机可打开）：https://你的用户名.github.io/nio-portfolio/
 
 ## 更新内容
-
-改完 `index.html` 或 `assets/` 后：
 
 ```bash
 cd /Users/wangxiao/Desktop/NIO_Portfolio_WangXiao
 git add .
-git commit -m "更新作品集内容"
-git push
+git commit -m "更新作品集"
+./push-to-github.sh
 ```
 
-推送后流水线会自动重新发布。
-
-## 目录说明
+## 目录
 
 ```text
 .
-├── index.html          # 作品站主页
-├── assets/             # 案例图片
-├── .gitlab-ci.yml      # GitLab Pages 部署配置
+├── index.html                 # 作品站主页
+├── assets/                    # 案例图片
+├── .github/workflows/pages.yml# 自动发布 Pages
+├── push-to-github.sh          # 一键推送脚本
 └── README.md
 ```
