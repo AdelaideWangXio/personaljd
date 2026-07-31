@@ -9,21 +9,9 @@
 set -e
 cd "$(dirname "$0")"
 
-# ========== 改成你的仓库地址 ==========
-REPO_HTTPS="https://github.com/你的用户名/nio-portfolio.git"
-# =====================================
-
-if [[ "$REPO_HTTPS" == *"你的用户名"* ]]; then
-  echo "请先编辑本脚本，把 REPO_HTTPS 改成你的真实仓库地址。"
-  echo "例如：https://github.com/wx6243631/nio-portfolio.git"
-  echo ""
-  read -r -p "或现在直接粘贴仓库 HTTPS 地址后回车: " INPUT
-  if [ -z "$INPUT" ]; then
-    echo "已取消。"
-    exit 1
-  fi
-  REPO_HTTPS="$INPUT"
-fi
+# ========== 你的仓库地址 ==========
+REPO_HTTPS="https://github.com/AdelaideWangXio/personaljd.git"
+# =================================
 
 # 去掉末尾 .git 再解析用户名（用于 token URL）
 REPO_PATH="${REPO_HTTPS#https://github.com/}"
