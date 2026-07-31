@@ -48,20 +48,18 @@ https://github.com/settings/tokens
 
 ### 4. 打开 GitHub Pages
 
-1. 打开仓库 → **Settings → Pages**
-2. **Source** 选 **GitHub Actions**
-3. 到 **Actions** 页等 `Deploy GitHub Pages` 变绿
-4. 再回 **Settings → Pages** 复制网址
-
-常见地址：
+1. 打开：https://github.com/AdelaideWangXio/personaljd/settings/pages
+2. **Source** 选 **Deploy from a branch**
+3. **Branch** 选 `main`，文件夹选 `/ (root)` → **Save**
+4. 等 1～2 分钟后访问：
 
 ```text
-https://你的用户名.github.io/nio-portfolio/
+https://adelaidewangxio.github.io/personaljd/
 ```
 
 ### 5. 发给 HR
 
-> 作品集（手机可打开）：https://你的用户名.github.io/nio-portfolio/
+> 作品集（手机可打开）：https://adelaidewangxio.github.io/personaljd/
 
 ## 更新内容
 
